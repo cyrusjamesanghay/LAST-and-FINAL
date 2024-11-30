@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+</head>
+<body>
+    <div class="intro-container" id="intro-container">
+        <div class="intro-text">
+            <h1 id="welcome-message">Welcome to My Website!</h1>
+            <p id="sub-message">Let's GO!!.</p>
+            <button id="explore-btn">Explore</button>
+        </div>
+    </div>
+
+    <script src="1.js"></script>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+}
+
+
+body {
+    background-image: url('https://rare-gallery.com/uploads/posts/374476-4k-wallpaper.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundIntro 3s ease-in-out forwards; 
+    position: relative;
+}
+
+
+@keyframes backgroundIntro {
+    0% {
+        transform: scale(1.1); 
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 1;
+    }
+}
+
+
+@keyframes backgroundOutro {
+    0% {
+        transform: scale(1); 
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+.intro-container {
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+    animation: fadeIn 2s ease-out forwards; 
+}
+
+
+#welcome-message, #sub-message, #explore-btn {
+    opacity: 0; 
+    animation: fadeInUp 1s ease-out forwards; 
+}
+
+#welcome-message {
+    animation-delay: 0.5s;
+}
+
+#sub-message {
+    animation-delay: 1s;
+}
+
+#explore-btn {
+    animation-delay: 1.5s;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+
+button {
+    padding: 12px 25px;
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff7f00;
+}
+
+</style>
+</body>
+</html>
